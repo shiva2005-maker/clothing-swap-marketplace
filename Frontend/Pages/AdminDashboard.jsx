@@ -72,8 +72,7 @@ const AdminDashboard = () => {
 
     if (error) {
         return (
-            <AdminLayout>
-                <div className="min-h-screen flex items-center justify-center">
+            <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                     <p className="text-red-500 mb-4">{error}</p>
 
@@ -85,13 +84,11 @@ const AdminDashboard = () => {
                     </button>
                 </div>
             </div>
-            </AdminLayout>
         );
     }
 
     return (
-        <AdminLayout>
-            <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen bg-gray-100">
 
             {/* Header */}
             <div className="bg-black text-white px-6 py-5">
@@ -364,7 +361,6 @@ const AdminDashboard = () => {
             </div>
 
         </div>
-        </AdminLayout>
     );
 };
 

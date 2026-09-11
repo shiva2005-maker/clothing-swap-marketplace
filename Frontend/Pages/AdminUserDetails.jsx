@@ -120,7 +120,6 @@ const AdminUserDetails = () => {
 
     if (error) {
         return (
-            <AdminLayout>
                 <div className="min-h-screen flex items-center justify-center bg-gray-100">
                     <div className="bg-white p-8 rounded-xl shadow-sm text-center">
                         <p className="text-red-500 mb-4">{error}</p>
@@ -133,7 +132,6 @@ const AdminUserDetails = () => {
                         </button>
                     </div>
                 </div>
-            </AdminLayout>
         );
     }
 
@@ -146,7 +144,6 @@ const AdminUserDetails = () => {
 
 
     return (
-        <AdminLayout>
             <div className="min-h-screen bg-gray-100">
 
                 {/* Header */}
@@ -302,7 +299,6 @@ const AdminUserDetails = () => {
                 </div>
 
             </div>
-        </AdminLayout>
     );
 };
 

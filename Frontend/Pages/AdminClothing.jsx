@@ -180,8 +180,7 @@ const AdminClothing = () => {
 
 
     return (
-        <AdminLayout>
-            <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen bg-gray-100">
 
             {/* Header */}
             <div className="bg-black text-white px-6 py-5">
@@ -428,15 +427,14 @@ const AdminClothing = () => {
                                                 <td className="px-6 py-4">
 
                                                     <span
-                                                        className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                                                            item.status === "Available"
+                                                        className={`px-3 py-1 rounded-full text-xs font-semibold ${item.status === "Available"
                                                                 ? "bg-green-100 text-green-700"
                                                                 : item.status === "Inactive"
-                                                                ? "bg-red-100 text-red-700"
-                                                                : item.status === "Swapped"
-                                                                ? "bg-gray-200 text-gray-700"
-                                                                : "bg-yellow-100 text-yellow-700"
-                                                        }`}
+                                                                    ? "bg-red-100 text-red-700"
+                                                                    : item.status === "Swapped"
+                                                                        ? "bg-gray-200 text-gray-700"
+                                                                        : "bg-yellow-100 text-yellow-700"
+                                                            }`}
                                                     >
                                                         {item.status}
                                                     </span>
@@ -473,20 +471,19 @@ const AdminClothing = () => {
                                                                 item.status === "Pending Swap" ||
                                                                 item.status === "Swapped"
                                                             }
-                                                            className={`px-3 py-1.5 rounded-lg text-sm ${
-                                                                item.status === "Pending Swap" ||
-                                                                item.status === "Swapped"
+                                                            className={`px-3 py-1.5 rounded-lg text-sm ${item.status === "Pending Swap" ||
+                                                                    item.status === "Swapped"
                                                                     ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                                                                     : item.status === "Available"
-                                                                    ? "bg-yellow-100 text-yellow-700 hover:bg-yellow-200"
-                                                                    : "bg-green-100 text-green-700 hover:bg-green-200"
-                                                            }`}
+                                                                        ? "bg-yellow-100 text-yellow-700 hover:bg-yellow-200"
+                                                                        : "bg-green-100 text-green-700 hover:bg-green-200"
+                                                                }`}
                                                         >
                                                             {item.status === "Available"
                                                                 ? "Deactivate"
                                                                 : item.status === "Inactive"
-                                                                ? "Activate"
-                                                                : "Unavailable"}
+                                                                    ? "Activate"
+                                                                    : "Unavailable"}
                                                         </button>
 
 
@@ -523,7 +520,6 @@ const AdminClothing = () => {
             </div>
 
         </div>
-        </AdminLayout>
     );
 };
 
