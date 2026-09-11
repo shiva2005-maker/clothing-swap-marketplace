@@ -21,7 +21,7 @@ const {
     getSwapById,
     getSwapsByStatus,
     updateSwapStatus
-} = require("../controllers/AdminController");
+} = require("../Controllers/AdminController");
 
 
 router.get(
