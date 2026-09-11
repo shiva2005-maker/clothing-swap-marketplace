@@ -17,7 +17,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://clothing-swap-marketplace-om9o-1vhy3iy6r.vercel.app",
+    origin: "https://clothing-swap-marketplace-om9o.vercel.app",
     credentials: true,
   },
 });
@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cookieparser());
 
 const corsOptions = {
-  origin: "https://clothing-swap-marketplace-om9o-1vhy3iy6r.vercel.app",
+  origin: "https://clothing-swap-marketplace-om9o.vercel.app",
   credentials: true,                // required for cookies/credentials
   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   allowedHeaders: ["Content-Type","Authorization"]
