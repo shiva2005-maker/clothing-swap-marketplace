@@ -41,13 +41,13 @@ module.exports.userregister = async (req, res) => {
     });
 
     const token = await generatetoken(user);
-    res.cookie('token', token, {
-      httpOnly: true,
-      sameSite: 'lax',
-      secure: false,
-      path: '/',
-      maxAge: 7 * 24 * 60 * 60 * 1000
-    });
+    res.cookie("token", token, {
+    httpOnly: true,
+    sameSite: "none",
+    secure: true,
+    path: "/",
+    maxAge: 7 * 24 * 60 * 60 * 1000
+});
 
     return res.send({ user, token });
   } catch (err) {
@@ -74,7 +74,7 @@ module.exports.userlogin = async (req,res)=>{
 
     let token = await generatetoken(user);
     // Persist cookie for 7 days so session survives browser restarts
-    res.cookie("token", token, { httpOnly: true, sameSite: "lax", secure: false, path: "/", maxAge: 7 * 24 * 60 * 60 * 1000 });
+    res.cookie("token", token, { httpOnly: true, sameSite: "none", secure: true, path: "/", maxAge: 7 * 24 * 60 * 60 * 1000 });
     return res.send({user,token,role:user.role});
     
 };
