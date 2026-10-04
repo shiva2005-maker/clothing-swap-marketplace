@@ -57,17 +57,17 @@ module.exports.createClothing = async (req, res) => {
 
     const locationValue = String(location).trim();
 
-    console.log(
-      "Clothing location received:",
-      locationValue
-    );
+    // console.log(
+    //   "Clothing location received:",
+    //   locationValue
+    // );
 
     const geo = await geocodeLocation(locationValue);
 
-    console.log(
-      "Clothing geocode result:",
-      geo
-    );
+    // console.log(
+    //   "Clothing geocode result:",
+    //   geo
+    // );
 
 
     if (!geo) {

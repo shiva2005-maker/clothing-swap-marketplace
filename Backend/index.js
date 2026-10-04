@@ -46,18 +46,13 @@ app.use('/message',messageRouter);
 app.use('/admin',AdminRouter);
 
 io.on("connection", (socket) => {
-  console.log("User connected:", socket.id);
 
   socket.on("joinRoom", (roomId) => {
     socket.join(roomId);
 
-    console.log(
-      `Socket ${socket.id} joined room ${roomId}`
-    );
   });
 
   socket.on("sendMessage", (data) => {
-    console.log("Message received:", data);
 
     io.to(data.roomId).emit(
       "receiveMessage",
@@ -66,13 +61,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    console.log(
-      "User disconnected:",
-      socket.id
-    );
   });
 });
 
-server.listen(process.env.port || 5000, () => {
-  console.log(`Server running on port ${process.env.port || 5000}`);
-});
+server.listen(process.env.port || 5000);

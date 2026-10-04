@@ -34,7 +34,7 @@ const getDashboardStats = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Admin dashboard error:", error);
+        console.error("Admin dashboard error:", error);
 
         return res.status(500).json({
             success: false,
@@ -57,7 +57,7 @@ const getAllUsers = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Get all users error:", error);
+        console.error("Get all users error:", error);
 
         return res.status(500).json({
             success: false,
@@ -90,7 +90,7 @@ const getUserById = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Get user error:", error);
+        console.error("Get user error:", error);
 
         return res.status(500).json({
             success: false,
@@ -135,7 +135,7 @@ const toggleUserStatus = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Toggle user status error:", error);
+        console.error("Toggle user status error:", error);
 
         return res.status(500).json({
             success: false,
@@ -175,7 +175,7 @@ const deleteUser = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Delete user error:", error);
+        console.error("Delete user error:", error);
 
         return res.status(500).json({
             success: false,
@@ -199,7 +199,7 @@ const getAllClothing = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Get all clothing error:", error);
+        console.error("Get all clothing error:", error);
 
         return res.status(500).json({
             success: false,
@@ -230,7 +230,7 @@ const getClothingById = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Get clothing error:", error);
+        console.error("Get clothing error:", error);
 
         return res.status(500).json({
             success: false,
@@ -274,7 +274,7 @@ const toggleClothingStatus = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Toggle clothing error:", error);
+        console.error("Toggle clothing error:", error);
 
         return res.status(500).json({
             success: false,
@@ -306,7 +306,7 @@ const deleteClothing = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Delete clothing error:", error);
+        console.error("Delete clothing error:", error);
 
         return res.status(500).json({
             success: false,
@@ -331,7 +331,7 @@ const getAllSwaps = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Get all swaps error:", error);
+        console.error("Get all swaps error:", error);
 
         return res.status(500).json({
             success: false,
@@ -365,7 +365,7 @@ const getSwapById = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Get swap error:", error);
+        console.error("Get swap error:", error);
 
         return res.status(500).json({
             success: false,
@@ -410,7 +410,7 @@ const getSwapsByStatus = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Get swaps by status error:", error);
+        console.error("Get swaps by status error:", error);
 
         return res.status(500).json({
             success: false,
@@ -526,7 +526,7 @@ const updateSwapStatus = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Update swap status error:", error);
+        console.error("Update swap status error:", error);
 
         return res.status(500).json({
             success: false,

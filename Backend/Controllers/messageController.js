@@ -1,9 +1,7 @@
 const MessageModel = require("../Models/messageModel");
 const SwapRequestModel = require("../Models/swapRequestModel");
 
-// ==========================================
-// SEND MESSAGE
-// ==========================================
+
 
 module.exports.sendMessage = async (req, res) => {
   try {
@@ -89,9 +87,6 @@ module.exports.sendMessage = async (req, res) => {
 };
 
 
-// ==========================================
-// GET CHAT MESSAGES
-// ==========================================
 
 module.exports.getMessages = async (req, res) => {
   try {

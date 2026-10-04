@@ -1,9 +1,7 @@
 const SwapRequestModel = require("../Models/swapRequestModel");
 const ClothingModel = require("../Models/clothingModel");
 
-// ==========================================
-// CREATE SWAP REQUEST
-// ==========================================
+
 
 module.exports.createSwapRequest = async (req, res) => {
   try {
@@ -133,9 +131,6 @@ module.exports.createSwapRequest = async (req, res) => {
 };
 
 
-// ==========================================
-// GET SENT REQUESTS
-// ==========================================
 
 module.exports.getSentRequests = async (req, res) => {
   try {
@@ -164,10 +159,6 @@ module.exports.getSentRequests = async (req, res) => {
 };
 
 
-// ==========================================
-// GET RECEIVED REQUESTS
-// ==========================================
-
 module.exports.getReceivedRequests = async (req, res) => {
   try {
     const user = req.user;
@@ -195,9 +186,6 @@ module.exports.getReceivedRequests = async (req, res) => {
 };
 
 
-// ==========================================
-// UPDATE REQUEST STATUS
-// ==========================================
 
 module.exports.updateSwapRequestStatus = async (
   req,
@@ -373,7 +361,7 @@ module.exports.completeSwapRequest = async (req, res) => {
 
     } catch (error) {
 
-        console.log(
+        console.error(
             "Complete swap error:",
             error
         );

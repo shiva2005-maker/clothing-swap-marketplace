@@ -121,11 +121,11 @@ module.exports.updateProfile = async (req, res) => {
 
             const locationValue = String(locationText).trim();
 
-            console.log("Location received:", locationValue);
+            // console.log("Location received:", locationValue);
 
             const geo = await geocodeLocation(locationValue);
 
-            console.log("Geocode result:", geo);
+            // console.log("Geocode result:", geo);
 
             if (!geo) {
 
@@ -179,7 +179,7 @@ module.exports.updateProfile = async (req, res) => {
 
     } catch (error) {
 
-        console.log("Update profile error:", error);
+        console.error("Update profile error:", error);
 
         return res.status(500).json({
             success: false,
